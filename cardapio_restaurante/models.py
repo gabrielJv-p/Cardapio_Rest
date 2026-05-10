@@ -28,7 +28,7 @@ class ItemCardapio(models.Model):
     """Um prato ou bebida do cardápio."""
     categoria = models.ForeignKey(
         Categoria,
-        on_delete=models.PROTECT,   # não deixa apagar categoria com itens
+        on_delete=models.PROTECT,
         related_name='itens'
     )
     nome = models.CharField(max_length=200)
